@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Oswald", sans-serif;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-weight: bold;
+        background-color: #f0f0f0;
+      }
+      .container {
+        background: #ffffff;
+        max-width: 1000px;
+        margin: auto;
+        padding: 5px;
+        box-shadow: 0px 0px 20px -10px black;
+        display: flex;
+        flex-wrap: wrap;
+        height: 95vh;
+        justify-content: space-between;
+      }
+      .one {
+        background-color: hotpink;
+      }
+      .two {
+        background-color: #9acd32;
+      }
+      .three {
+        background-color: #663399;
+      }
+      .four {
+        background-color: #4169e1;
+      }
+      .flex-one-one {
+        flex-basis: 100%;
+        flex-direction: column;
+        display: flex;
+      }
+      .item {
+        flex-grow: 1;
+        color: #ffffff;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .flex-one-two {
+        flex-basis: 100%;
+        display: flex;
+      }
+      @media (min-width: 650px) {
+        .flex-one-one {
+          flex-direction: row;
+          flex-basis: 70%;
+          flex-wrap: wrap;
+        }
+        .one {
+          flex-basis: 50%;
+        }
+        .two {
+          flex-basis: 50%;
+        }
+        .flex-one-two {
+          flex-basis: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-one-one">
+        <div class="item one">1</div>
+        <div class="item two">2</div>
+        <div class="item three">3</div>
+      </div>
+      <div class="flex-one-two">
+        <div class="item four">4</div>
+      </div>
+    </div>
+  </body>
+</html>
